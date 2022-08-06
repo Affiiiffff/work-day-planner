@@ -6,23 +6,7 @@ $(".description").each(function () {
   var now = moment();
   var currentTime = now.hour();
 
-  // To check the time and add the classes for background indicators
-  if (blockTime < currentTime) {
-    $(this).removeClass("future");
-    $(this).removeClass("present");
-    $(this).addClass("past");
-  } else if (blockTime === currentTime) {
-    $(this).removeClass("past");
-    $(this).removeClass("future");
-    $(this).addClass("present");
-  } else {
-    $(this).removeClass("present");
-    $(this).removeClass("past");
-    $(this).addClass("future");
-  }
-});
-
-for (let index = 9; index < 17; index++) {
+ index < 17; index++) {
   $(`#hour${index} .description`).val(localStorage.getItem(`hour${index}`));
 }
 
