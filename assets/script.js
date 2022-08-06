@@ -25,10 +25,3 @@ $(".description").each(function () {
 for (let index = 9; index < 17; index++) {
   $(`#hour${index} .description`).val(localStorage.getItem(`hour${index}`));
 }
-
-$(".saveBtn").on("click", function () {
-  var text = $(this).siblings(".description").val();
-  var time = $(this).parent().attr("id");
-
-  localStorage.setItem(time, text);
-});
